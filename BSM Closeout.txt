@@ -1,0 +1,178 @@
+Presentation Script for Slide
+Title: LM Framework Current State (1/2) | Breakdown by Material & Critical Applications
+
+Introduction:
+"Good [morning/afternoon/evening], everyone. Today, I will be presenting the current state of our License Management (LM) framework, focusing on the breakdown by material and critical applications."
+
+Section 1: Material vs. Non-Material Spend
+"Let's start by examining our spend from a material versus non-material perspective. As depicted in the first pie chart on the top left:
+
+Our material spend amounts to $10.7 million, which constitutes 8% of the total.
+In contrast, the non-material spend is significantly higher at $132.1 million, representing 92% of the total spend."
+Section 2: Material vs. Non-Material Count
+"Moving on to the count of material versus non-material applications:
+
+We have 23 material applications, accounting for 11% of the total count.
+Meanwhile, there are 177 non-material applications, making up 89%."
+Section 3: Critical vs. Non-Critical Spend
+"Now, let's shift our focus to the critical versus non-critical spend. As shown in the bottom left pie chart:
+
+Critical applications account for $21.5 million, which is 15% of our total spend.
+Non-critical applications dominate our spend at $121.8 million, representing 85%."
+Section 4: Critical vs. Non-Critical Count
+"Finally, looking at the count of critical versus non-critical applications:
+
+We have 120 critical applications, which is 60% of the total count.
+Non-critical applications number 80, making up 40%."
+Key Metrics:
+"To summarize some key metrics highlighted on the right side of the slide:
+
+Our total software spend amounts to $142 million.
+We engage with over 200 software vendors.
+Specifically, $98 million is spent on EDFW.
+And $32 million is allocated to Softchoice."
+Conclusion:
+"In conclusion, this breakdown provides a clear view of how our resources are allocated across material and non-material as well as critical and non-critical applications. It highlights areas where we might optimize our spend and vendor management strategies."
+
+Closing:
+"Thank you for your attention. I will now take any questions you may have regarding this data."
+
+This script provides a structured approach to explaining the slide's data, ensuring that the audience clearly understands the breakdown of material and critical applications in the LM framework.
+
+
+Create a script for this slide too 
+ChatGPT
+Presentation Script for Slide
+Title: LM Framework Current State (2/2) | Breakdown by Vendor Spend Asia vs North America
+
+Introduction:
+"Hello again, everyone. Now, we will continue our presentation by diving into the breakdown of vendor spend between Asia and North America."
+
+Section 1: Pareto on Spend in North America
+"First, let's look at the Pareto analysis of spend in North America as shown in the top chart:
+
+Microsoft leads with a significant spend of approximately $59.2 million.
+Amazon follows at around $23.9 million.
+Broadcom stands at roughly $17.4 million.
+These top three vendors together constitute 66% of our total vendor spend in North America."
+Section 2: Key Insights from North America
+"Here are some key insights from our North American spend:
+
+The total vendor spend in North America is $137.3 million.
+Microsoft, Amazon, and Broadcom alone make up 66% of all vendor spend.
+Other notable vendors include IBM with $6.2 million, Oracle at $3.0 million, and Adobe with $1.6 million."
+Section 3: Pareto on Spend in Asia
+"Next, let's shift our focus to the Pareto analysis of spend in Asia, depicted in the bottom chart:
+
+IBM leads the spend in Asia with $2.6 million.
+Oracle follows with a spend of $1.3 million.
+FIS stands at $1.0 million.
+Collectively, IBM, Oracle, and FIS make up 62% of all vendor spend in Asia."
+Section 4: Key Insights from Asia
+"From our analysis in Asia, we can highlight the following key points:
+
+The total vendor spend in Asia is $5.5 million.
+IBM, Oracle, and FIS contribute to 62% of the total vendor spend.
+This analysis helps us understand the concentration of our vendor spend in both regions."
+Conclusion:
+"In conclusion, this detailed breakdown by region reveals the concentration of our vendor spend and highlights key vendors that dominate our expenditures in North America and Asia. This information is critical for strategic planning and optimizing our vendor management processes."
+
+Closing:
+"Thank you for your attention. I will now open the floor for any questions you might have regarding this breakdown."
+
+This script provides a comprehensive explanation of the slide's data, ensuring clarity on the distribution of vendor spend across different regions.
+
+
+
+Create a script for these two slides aswell 
+ChatGPT
+Presentation Script for Slide 1
+Title: North America Analysis 2023/2024
+
+Introduction:
+"Hello, everyone. In this section, we will delve into the North America Analysis for 2023 and 2024, focusing on vendor spend and the distribution of material and critical vendors."
+
+Section 1: 2023 Analysis
+"Let's start with the analysis for the year 2023:
+
+The total vendor spend for 2023 was $124,059,194.91 with a total vendor count of 192.
+Microsoft led the vendor spend with $50,862,143, accounting for 41% of the total spend.
+Amazon followed with $19,343,553, and Broadcom with $9,400,233.
+Other significant vendors included Oracle, IBM, and Adobe, with the remaining $37,226,543 spent on other vendors."
+Material and Critical Vendors in 2023:
+
+We had 16 material vendors and 176 non-material vendors.
+There were 85 critical vendors and 107 non-critical vendors.
+Additionally, 15 applications had product stewards while 177 did not.
+Section 2: 2024 Analysis
+"Moving on to 2024:
+
+The total vendor spend increased to $142,825,009 with a vendor count of 200.
+Microsoft continued to lead with a spend of $59,345,769, making up 42% of the total spend.
+Amazon's spend increased to $23,280,772, and Broadcom's to $11,756,617.
+Oracle, IBM, and Adobe also saw significant spends with $38,570,499.76 spent on other vendors."
+Material and Critical Vendors in 2024:
+
+The number of material vendors increased to 23, while non-material vendors slightly increased to 177.
+Critical vendors remained at 85, while non-critical vendors increased to 120.
+The applications with product stewards remained consistent at 15.
+Vendor Spend Change:
+
+We observed a 14% increase in total spend and an 8-vendor increase from 2023 to 2024.
+Conclusion:
+"This analysis highlights the trends in vendor spend and the shifts in the number of vendors between 2023 and 2024, helping us identify areas of growth and strategic focus."
+
+Closing:
+"I will now take any questions regarding this section before we move on to the next part of the presentation."
+
+Presentation Script for Slide 2
+Title: North America Analysis 2023 Q4 - 2024 Q1
+
+Introduction:
+"Continuing with our North America Analysis, we will now look at the comparisons between the last quarter of 2023 and the first quarter of 2024, focusing on applications with discrepancies."
+
+Section 1: Previous (2023 Q4)
+"First, let's examine the data from Q4 2023:
+
+Microsoft Applications with Discrepancies:
+
+Desktop: 86% compliance, 1 over deployment, 5 under deployments (total tracked: 7).
+Server: 83% compliance, 1 over deployment, 5 under deployments (total tracked: 6).
+Adobe Applications with Discrepancies:
+
+Desktop: 83% compliance, 1 over deployment, 5 under deployments (total tracked: 6).
+Server: 83% compliance, 1 over deployment, 5 under deployments (total tracked: 6).
+Oracle Applications with Discrepancies:
+
+Desktop: 99% compliance, 1 over deployment, 67 under deployments (total tracked: 68).
+Server: 83% compliance, 1 over deployment, 5 under deployments (total tracked: 6).
+IBM Applications with Discrepancies:
+
+ILMT: 100% compliance, 0 over deployments, 53 under deployments (total tracked: 53).
+Mainframe: 83% compliance, 1 over deployment, 5 under deployments (total tracked: 6)."
+Section 2: 2024 Q1
+"Now, let's compare this with Q1 2024:
+
+Microsoft Applications with Discrepancies:
+
+Desktop: Maintained at 86% compliance.
+Server: Maintained at 83% compliance.
+Adobe Applications with Discrepancies:
+
+Desktop: Maintained at 83% compliance.
+Server: Maintained at 83% compliance.
+Oracle Applications with Discrepancies:
+
+Desktop: Improved to 100% compliance.
+Server: Maintained at 83% compliance.
+IBM Applications with Discrepancies:
+
+ILMT: Slight drop to 98% compliance.
+Mainframe: Maintained at 83% compliance."
+Conclusion:
+"By comparing these two periods, we observe consistency in compliance rates for Microsoft, Adobe, and IBM Mainframe applications. Oracle desktop applications improved significantly, while IBM ILMT showed a slight decrease. This information is crucial for addressing discrepancies and improving overall compliance."
+
+Closing:
+"Thank you for your attention. Please feel free to ask any questions or provide feedback on this analysis."
+
+These scripts provide a detailed and structured narrative for presenting the analysis of North American vendor spend and application discrepancies between 2023 and 2024.
