@@ -1,0 +1,1290 @@
+WEBVTT
+
+1
+00:00:02.050 --> 00:00:03.640
+Arun Chander: Yeah, this will be the last one in zoom.
+
+2
+00:00:04.950 --> 00:00:13.107
+Chris Dahle (he/him): But don't you love Zoom, I mean, isn't it like visiting an old friend when you come into zoom? It feels like, oh, I remember this place.
+
+3
+00:00:14.660 --> 00:00:16.460
+Andy Clark: And Zoom never did us wrong. Right?
+
+4
+00:00:16.460 --> 00:00:18.680
+Chris Dahle (he/him): No, Zoom never did anything for us.
+
+5
+00:00:22.470 --> 00:00:23.130
+Chris Dahle (he/him): Purple.
+
+6
+00:00:24.410 --> 00:00:28.000
+Arun Chander: They change the user interface, though it's the 1st time seeing it since last month.
+
+7
+00:00:28.390 --> 00:00:29.759
+Arun Chander: So it looks a little different
+
+8
+00:00:31.200 --> 00:00:37.030
+Arun Chander: anyways. Good morning, everyone. Good evening to folks who are in India or Asia.
+
+9
+00:00:37.760 --> 00:00:39.419
+Arun Chander: This is our June
+
+10
+00:00:39.500 --> 00:00:42.690
+Arun Chander: 2024. Leader Forum. I'll get right into it.
+
+11
+00:00:44.270 --> 00:00:58.154
+Arun Chander: so we'll take a look at the upcoming agendas. And we have a few guest speakers. We'll start off with Andy and Kamal talking about an Idp solution, using Jan AI some of their experiences.
+
+12
+00:00:58.925 --> 00:01:07.870
+Arun Chander: and then we have Gurin and the punker who've joined us from slgs to talk about some of the work they've done with genii with respect to patterns and use cases, and so on.
+
+13
+00:01:09.940 --> 00:01:28.619
+Arun Chander: So in terms of our topics. Last month we talked about sun lives approach to local development where we focused on power platform power automate. We had the Dbts team show up and provide us a demo for a recent power automate solution that they had worked on with the Monthly Monitor Report automation.
+
+14
+00:01:28.790 --> 00:01:40.870
+Arun Chander: So it was a pretty good session. A lot of good learnings. Today, we have some external speakers, guest speakers. You're talking about Gen. AI focusing on some Idp solutions, patterns. Use cases. So thank you for joining
+
+15
+00:01:41.329 --> 00:01:51.229
+Arun Chander: and then next session, which is in July, we will talk about the Q. 2 dashboard and some enhancements to the dashboard on how we plan to incorporate cost data
+
+16
+00:01:51.537 --> 00:02:12.939
+Arun Chander: and we'll also have Janet Weldon's team join us and talk about provide a Gen. AI overview. Some of things are happening within the organization where they're ahead of the Gen. AI, and so on. So if you're interested in joining, and if you're not on the on the monthly invite. Let us let me know, and I'll add you to the invite. I think we have some good sessions planned moving forward as well.
+
+17
+00:02:13.620 --> 00:02:23.069
+Arun Chander: Okay. Having said that, I will pass it over to Andy and Kamal, Andy, let me know if you want to share your screen, or if you want me to continue sharing
+
+18
+00:02:25.760 --> 00:02:27.030
+Arun Chander: I don't know if you dropped.
+
+19
+00:02:29.240 --> 00:02:33.960
+Kahtan Aizouki: So Andy and I are in the same office, and zoom has just crashed on me.
+
+20
+00:02:34.542 --> 00:02:39.510
+Andy Clark: I'm back. Zoom, so I hear I was saying, zoom, what did zoom ever do wrong, guys?
+
+21
+00:02:39.510 --> 00:02:40.090
+Chris Dahle (he/him): Huh!
+
+22
+00:02:40.480 --> 00:02:40.870
+Arun Chander: You.
+
+23
+00:02:41.100 --> 00:02:41.959
+Andy Clark: Crashes. I say.
+
+24
+00:02:41.960 --> 00:02:44.018
+Chris Dahle (he/him): Dream of love work. Yeah.
+
+25
+00:02:46.000 --> 00:02:46.940
+Andy Clark: Okay.
+
+26
+00:02:47.010 --> 00:02:54.520
+Andy Clark: great thanks, Arun, and welcome everybody. Nice to see many of you. I know most of you, and it's great to connect.
+
+27
+00:02:54.520 --> 00:03:19.450
+Andy Clark: and I know for a lot of you. That Idp isn't a brand new topic. And so I think that this is an opportunity for us to kind of revisit with you for those of you who don't know a lot about what we're doing in the Idp space this is an opportunity for us to share and give you an update about it. And with an AI focus. Today, we're actually going to. We brought our architect Kamal along as well. So we're gonna geek out a little bit
+
+28
+00:03:19.450 --> 00:03:30.218
+Andy Clark: and get into the technology, maybe a little bit more than we might usually so you get an idea of how we're using AI in this space to make things better for our business partners. So
+
+29
+00:03:30.510 --> 00:03:34.169
+Andy Clark: let's move on, Arun, please. And so
+
+30
+00:03:34.380 --> 00:03:40.670
+Andy Clark: for those of you who are maybe a little bit new to the space. Intelligent document processing is a a
+
+31
+00:03:40.720 --> 00:04:04.209
+Andy Clark: platform that's used across sunlife North America. And we use it today for for document processing and document understanding. There's a lot of documents that that we use in the business at sun life and our intelligent document processing platforms are really key to how those documents make it in the door and to the right place in the business for processing.
+
+32
+00:04:04.240 --> 00:04:16.800
+Andy Clark: And so we've been working on an existing platform the cofax platform for many, many years. But there's a lot of advancements happening in the space. And so we're at this place where we've got an opportunity now to
+
+33
+00:04:16.800 --> 00:04:39.839
+Andy Clark: tap into some of those new capabilities. And Idp, we wanna talk a little bit about why, why is that important. What will this do for our business areas? And and in turn, what is our team delivering in these results as we go right now through a pilot process for this new Idp solution. So we can go to the next slide, please. Room. Thanks.
+
+34
+00:04:39.840 --> 00:04:42.129
+Andy Clark: So here's this background around what
+
+35
+00:04:42.130 --> 00:04:46.494
+Andy Clark: what you say. Documents are important. How important are they, Andy? Well.
+
+36
+00:04:46.900 --> 00:05:00.189
+Andy Clark: in in our North American operations today, we have almost 50 million pages every year coming in. Some of these come in as paper. A lot of them come in as fax. Others are emails.
+
+37
+00:05:00.505 --> 00:05:17.224
+Andy Clark: We get uploads from the web site. We get uploads from mobile devices. And so we get a lot of documents. And you can see the breakdown here across the different lines of business. We've added Denta quest here so that they're reflected. And I wanna draw your attention to the bottom.
+
+38
+00:05:17.977 --> 00:05:37.839
+Andy Clark: right side. There's a yellow pie there which says, Gb, H. And D, it was for health and dental. And that volume of 9% today is the volume where we have significant automation for extracting the data and passing it through to back end systems only 9%.
+
+39
+00:05:37.840 --> 00:05:52.970
+Andy Clark: Most of the rest of this pie we have provide very light touch as far as extraction of data from documents and automation. So there's a really untapped potential here for the business to be able to get better
+
+40
+00:05:52.970 --> 00:06:15.100
+Andy Clark: information out of these documents to reduce manual processing and and overall increase their efficiency. And so we're gonna talk about, how are we gonna get into these other documents, these ones that aren't being utilized. And then maybe a question you might be asking is, Well, what do we do with them today? Like, what does it look like? So let's go to the next slide, Arun.
+
+41
+00:06:16.220 --> 00:06:44.629
+Andy Clark: So here's a typical document that comes in at sun life today. It lands in our cofax solution. And these 2 red boxes that you see on screen here. They represent today the data that's being captured off of these forms. Oftentimes it's being done by the Canadian document services team or the image services team in the Us. And is oftentimes manual. We might scan that barcode there in the bottom of the screen to get a little bit of information, but for the most part
+
+42
+00:06:44.630 --> 00:06:55.030
+Andy Clark: a couple of key pieces of data are captured manually, and then this is used to route the document, we send it to file net where it's stored, and then we set up a case.
+
+43
+00:06:55.030 --> 00:07:24.609
+Andy Clark: or we attach to a case in a case management system like Pega, or Gcs. And we say, Hey, here's a document. Somebody needs to access this document to do something with it. And then a knowledge worker goes to that case, opens the document and they start typing. They type into the corresponding systems. So you can see it's a process with many steps. It's manual. It has the risk of errors and overall the amount of time it takes and the efficiency of it is quite low.
+
+44
+00:07:24.710 --> 00:07:36.222
+Andy Clark: So if we go to the next screen, Arun, we're gonna see this same document. But now we're gonna see with all of the boxes that have data in it for this particular document. And you can see there's a lot of them.
+
+45
+00:07:36.650 --> 00:08:06.529
+Andy Clark: And this data is essential to the business. In fact, when this document lands on somebody's desk. They are typically typing in all of these fields of data into a corresponding system. Whether it's a address update or in this case, it's an enrollment form, or whichever kind of correspondence it is capturing. This data is essential. And so somebody today is doing it manually. But we want to be able to help automate this. So by using an Idp solution that can grab all of these fields of data.
+
+46
+00:08:06.570 --> 00:08:23.830
+Andy Clark: turn them into a data file format, something digital that can be then taken. And we can drive some further automation with that file of data. The business can then automate these processes that today we know as data entry processes and make them much more automatic.
+
+47
+00:08:23.830 --> 00:08:41.469
+Andy Clark: In the last session you talked about some of the low code development, and you're certainly, I think, aware of our space from our team that offers robotic process automation. Those are a couple of ways that we can take a data file that comes out of one of these documents and drive an automation.
+
+48
+00:08:41.470 --> 00:09:03.740
+Andy Clark: It could also be done through an Api sometimes, the business teams and their software will have an Api that they can feed with data. And so certainly all of those are ways to take this data once it's in a file and drive some automation for it. And so we're building out this Idp platform, a new Idp platform to bridge the gap between
+
+49
+00:09:03.740 --> 00:09:18.709
+Andy Clark: what our old platform was very much challenged to do, pulling all of these kinds of fields of data instead to one that's very robust and very capable of getting all the fields of data off of a form so that we can drive the automation
+
+50
+00:09:19.480 --> 00:09:33.789
+Andy Clark: alright. We'll go to one I think we've got. I've got 2 more, and I may be passing off to Kamal here very soon, so why are we doing it? Well, I've talked a little bit about this, as we've been kind of going through it. But really the big beneficiaries of
+
+51
+00:09:33.860 --> 00:09:46.790
+Andy Clark: Idp are gonna be our customers. And I I really mean that our end customers, the people who send us documents submit us documents all the time. Oftentimes those documents are coming in. They have to be
+
+52
+00:09:47.079 --> 00:10:04.719
+Andy Clark: go through that initial process. They get image. They get sent back to a back end system. They might wait in a queue there for quite a while before somebody picks up the document and acts on it, and then sometimes mistakes are made. So our customers experience isn't always the best. It is not what we in a lot of
+
+53
+00:10:05.070 --> 00:10:29.920
+Andy Clark: digital enterprise spaces have come to expect with, say, you know, other digital 1st companies where you go online, you fill something out. And it just happens instantaneously. Our customers don't get that experience today because of those delays and gaps. So our customers can really benefit from from this faster turnaround time and accuracy. And, of course, for our business operations, they can be much more efficient as well.
+
+54
+00:10:29.920 --> 00:10:35.280
+Andy Clark: Instead of paying knowledge workers, and who are very skilled at what they do to
+
+55
+00:10:35.280 --> 00:10:42.884
+Andy Clark: do data entry tasks. They can put those knowledge workers instead, focused on the more important tasks related to serving our customers
+
+56
+00:10:43.430 --> 00:11:00.760
+Andy Clark: and for our team. Well, our team is the team that builds out these opportunities. And the tool sets that we've been working with. They take a long time to build. They're very complex. And this new platform gives us an opportunity to shorten that cycle, make it a lower cost cycle which
+
+57
+00:11:00.760 --> 00:11:19.830
+Andy Clark: adds to the benefits for our business and area. And so Kamal's going to get into in a moment the actual technology stack and some of the other opportunities. So I'm not going to touch on these. They're in your deck here, and if you read any of these items on the slide and you want to ask further questions, I'm certainly you can reach out. But let's go on to the next slide, please. Room.
+
+58
+00:11:22.790 --> 00:11:24.529
+Shaila Islam (she, her): Chris does have his hand up.
+
+59
+00:11:24.820 --> 00:11:25.460
+Andy Clark: Yes.
+
+60
+00:11:25.900 --> 00:11:26.573
+Chris Dahle (he/him): Yeah, Andy.
+
+61
+00:11:26.910 --> 00:11:27.530
+Andy Clark: And Chris.
+
+62
+00:11:27.530 --> 00:11:38.239
+Chris Dahle (he/him): Great introduction. Thank you. Just question. So so I can better understand the landscape. The 48 million pages that you cited earlier. That's a substantial number
+
+63
+00:11:38.420 --> 00:11:40.540
+Chris Dahle (he/him): pages. How many
+
+64
+00:11:40.620 --> 00:11:42.730
+Chris Dahle (he/him): processes or
+
+65
+00:11:42.940 --> 00:11:46.339
+Chris Dahle (he/him): product does that span? Do you have a
+
+66
+00:11:46.640 --> 00:11:52.200
+Chris Dahle (he/him): I just like to understand the the number of forms? So that's the number of pages that come in.
+
+67
+00:11:52.720 --> 00:11:56.469
+Chris Dahle (he/him): How is that divided across how many different forms?
+
+68
+00:11:56.770 --> 00:12:01.419
+Chris Dahle (he/him): And then part of the question, that is, of those forms?
+
+69
+00:12:01.520 --> 00:12:05.480
+Chris Dahle (he/him): How many of them have a digital end to end equivalent.
+
+70
+00:12:05.580 --> 00:12:14.299
+Chris Dahle (he/him): and our client is just opting to use a hard copy and then submit that in. And then it goes through Idp. I'm just trying to.
+
+71
+00:12:14.490 --> 00:12:15.160
+Andy Clark: Yeah.
+
+72
+00:12:15.520 --> 00:12:41.350
+Andy Clark: understand the scope? Yeah, it's a great question, Chris. So on the 1st question that that you know 50 million pages, probably roughly equates somewhere in the 10 to 15 million documents. So unique documents. Because some of these documents have multiple pages. There are lots that are single page, but you know, so we're not exactly sure the exact count of documents, but 15 or so, maybe a little bit more than that.
+
+73
+00:12:41.350 --> 00:12:50.199
+Andy Clark: and that's broken down then, by all the unique lines of business. And we are actually working on some analysis right now to get to exactly what you've asked, which is
+
+74
+00:12:50.200 --> 00:13:13.050
+Andy Clark: how many different document types are there? That's a pretty challenging ask with the data that we have available to us today. But I can tell you for sure that it, from at least at the high level reporting we have. It's well over a thousand. It's likely more like 2 or 3,000 unique types of document flows that come through system now. Not all of them are big.
+
+75
+00:13:13.170 --> 00:13:29.929
+Andy Clark: Some of them may only get a few 100 documents a year, others may get a few 1,000, and then there's the ones, the big ones where you get, you know, 1020, 50,000, and of course, in the the spaces like claims, millions a year of some of the big ones.
+
+76
+00:13:30.440 --> 00:13:42.864
+Andy Clark: And so understanding that we're working on on understanding those that information about the data so that we could better help the business focus in on which of the ones are the the areas of focus.
+
+77
+00:13:43.260 --> 00:14:11.519
+Andy Clark: Now, I think your second part of the question is really important, which is, how many of these? Have a digital end to end process already. It's just that the business is enforcing people to use it in my experience? The answer, that is none. There just are not any digital end to end processes. And and let me let me clarify that we have digital processes where people can go and fill out a form online.
+
+78
+00:14:11.600 --> 00:14:30.339
+Andy Clark: And then what happens is when they finish filling out that form online, it gets made into a Pdf, and then that Pdf comes through cofax and goes through the exact same process that a paper, a document, or a fax document was so that the customer gets the illusion of a digital process.
+
+79
+00:14:30.380 --> 00:14:37.440
+Andy Clark: But the reality is is the data isn't digitally processed. It goes into the same manual process as a paper document.
+
+80
+00:14:37.530 --> 00:15:07.200
+Andy Clark: And so we're seeing some efforts by the business to start trying to build out those kind of end to end digital processes where not only would somebody fill out the form electronically, but all of the electronic processing required. The the automation part of it will be built in. And so the beauty of that when they do that is, even if they still have paper documents coming in, then we'll be able to adopt that same automation process. When they build it.
+
+81
+00:15:07.210 --> 00:15:13.720
+Andy Clark: we'll just pull the data off their paper documents and feed that same process. So looks like you were gonna jump in. Yeah.
+
+82
+00:15:13.720 --> 00:15:16.419
+Kahtan Aizouki: Yeah, I went to add to that.
+
+83
+00:15:16.470 --> 00:15:17.500
+Kahtan Aizouki: So, Chris.
+
+84
+00:15:17.690 --> 00:15:25.540
+Kahtan Aizouki: the other part of my team manages the forms design platform and document generation technology. So where
+
+85
+00:15:26.160 --> 00:15:44.400
+Kahtan Aizouki: we are being told that there are 22,000 variations of the only Pdf forms that we serve up either in paper or on the web or whatever. So the phones that we send out to the clients. You have 22,000 different variations of those phones for all the different potency, and that's only in Canada
+
+86
+00:15:44.500 --> 00:16:10.970
+Kahtan Aizouki: that doesn't count the Us. In addition to this, sometimes we joke about this, but it's a reality. Our business areas could accept a form that is designed by another carrier. It has the same data whatever, and for easy the process, and not to reject the the request. They just pick up that form and just process it. Which means when when you are trying to automate all of those variations, you need to have a technology that's intelligent enough
+
+87
+00:16:11.060 --> 00:16:13.159
+Kahtan Aizouki: to be able to decide
+
+88
+00:16:13.985 --> 00:16:20.404
+Kahtan Aizouki: what the phone type is and what is the content of the phone and where to route it to based on
+
+89
+00:16:21.480 --> 00:16:25.879
+Kahtan Aizouki: very small amount of of design and development that you spend on it.
+
+90
+00:16:27.630 --> 00:16:30.220
+Kahtan Aizouki: I think Anchov had his hand up.
+
+91
+00:16:31.802 --> 00:16:38.360
+Kamal Boorghani: Yeah, I just wanna add something. Just one other thing on top of this, that is that we don't have control
+
+92
+00:16:38.900 --> 00:16:41.269
+Kamal Boorghani: over all the forms that we're processing
+
+93
+00:16:41.350 --> 00:16:45.500
+Kamal Boorghani: when it comes to. For example, the claims area, we receive drug receipts.
+
+94
+00:16:45.990 --> 00:16:48.630
+Kamal Boorghani: We don't control what choppers pretty explore
+
+95
+00:16:48.870 --> 00:17:13.069
+Kamal Boorghani: what produces same goes for dental claim forms the Dental association, puts out claim forms, and we accept any form that was created from the beginning of the history until now, so that adds to the challenge of the variations and all the stuff that we see. It's just we don't have control over them in some areas.
+
+96
+00:17:15.410 --> 00:17:17.135
+Arun Chander: Angel. You had a question.
+
+97
+00:17:17.890 --> 00:17:34.999
+Anshul Kathuria: Yeah, I just want maybe, Andy to help confirm that hypothesis that I picked up my understanding was that this 48 million number that we shared? Is it going up over a period of time while this is still substantial? But is it? Is this number going up or going down? Why, I asked that question because
+
+98
+00:17:35.595 --> 00:17:52.170
+Anshul Kathuria: be used like H. And D, there is a strong focus on moving intake to whether mobile, app or web portal, and so on and so forth. So there is focus on that versus we onboard. New clients continue to onboard new clients which may get onto paper as well, so how is this number shaping up.
+
+99
+00:17:52.360 --> 00:18:13.309
+Andy Clark: Yeah. So just up until near before the pandemic started, we were seeing pretty steady increases year over year in that volume, and we have certainly seen that turn the other direction. During the pandemic there was a lot of paper that didn't flow in and overall, I would say with. There are more people who are using.
+
+100
+00:18:13.661 --> 00:18:36.890
+Andy Clark: We'll call them more digital like processes. And so overall the volume has, I'm I'm gonna call it, at this point, stabilized Angel. It isn't going down significantly. It might be going down a little bit year over year right now. But we're staying pretty steady in this about 45 48 million range per year. At this point we do anticipate, of course, over time
+
+101
+00:18:36.890 --> 00:18:53.209
+Andy Clark: more digital initiatives will start to take away from this volume, but, as Katan indicated, there are thousands and thousands of forms out there. And replacing them isn't gonna happen quickly. So we expect this to be a long, slow drain of paper.
+
+102
+00:18:54.630 --> 00:18:56.060
+Kamal Boorghani: Like. Have a good evening.
+
+103
+00:18:56.110 --> 00:19:01.150
+Kamal Boorghani: One more thing to what Miss Andy said. When it comes to your example.
+
+104
+00:19:01.210 --> 00:19:13.130
+Kamal Boorghani: the the Gb. Mobile and web submissions. Today we receive a few 1 million documents per year. That was not accounted in that 48 million. They go directly to file that.
+
+105
+00:19:13.748 --> 00:19:24.519
+Kamal Boorghani: We use those like the business uses those documents to verify the claims of people. So there is manual data entry and manual verification that's happening.
+
+106
+00:19:24.760 --> 00:19:26.659
+Kamal Boorghani: And I'm all yours. I'm gonna go away
+
+107
+00:19:26.710 --> 00:19:32.359
+Kamal Boorghani: right? So the the web and mobile submission. Those are like opportunities that we have on our roadmap.
+
+108
+00:19:32.410 --> 00:19:37.240
+Kamal Boorghani: But it's not counted as as the 48 million, because they don't flow through cofax today.
+
+109
+00:19:37.300 --> 00:19:39.170
+Kamal Boorghani: they just go directly to
+
+110
+00:19:39.980 --> 00:19:51.539
+Kamal Boorghani: to file them. So those opportunities are not going to go away. We still gonna ask people to provide receipts for verification, and Idp still gonna be applicable to to those volumes. For sure.
+
+111
+00:19:53.020 --> 00:20:03.878
+Andy Clark: So while I wrap up the last call, I'll just pass. You know your audio isn't very good. You're maybe you could switch to your a different microphone for before you get into your main presentation.
+
+112
+00:20:04.670 --> 00:20:10.269
+Andy Clark: Okay, so Rune, if we can just go to the next slide, so I'm gonna
+
+113
+00:20:10.400 --> 00:20:30.102
+Andy Clark: end here and then pass off to Kamal, who's gonna talk a little bit more? But this is just to kind of give you an idea of the scope of the journey of a document that comes in here, and where Idp fits in it. We talked about all these documents coming in that happens on the left. They come in, and all these different formats about like paper mail,
+
+114
+00:20:30.380 --> 00:20:45.069
+Andy Clark: facts and and other things like that all come in here, and when they come in, what what we do in Idp is, we identify them. What is this document? We may separate documents apart. So sometimes there's multiples together. And once we've identified what it is.
+
+115
+00:20:45.070 --> 00:21:04.879
+Andy Clark: then we're extracting data out of those forms. And then that data is used to route documents to the right place. And again today, this last step on the right additional data entry. That's what's happening in the business. Once we've sent them the document, and that's what we're looking to try to take care of as
+
+116
+00:21:04.880 --> 00:21:19.290
+Andy Clark: we get better. Idp tool sets in here at sunlight. So, Kamal, why don't you take over now, and I know he's gonna share a bit about our journey with the technology. And where artificial intelligence is playing a role. So over to you, then Kamal.
+
+117
+00:21:21.120 --> 00:21:25.390
+Kamal Boorghani: Alright. Thank you, Andy, is my my voice a little bit better now.
+
+118
+00:21:25.390 --> 00:21:25.990
+Andy Clark: Much better.
+
+119
+00:21:25.990 --> 00:21:26.870
+Arun Chander: Yep. Yep.
+
+120
+00:21:26.870 --> 00:21:29.659
+Kamal Boorghani: So is it okay? If I can share a room.
+
+121
+00:21:29.660 --> 00:21:31.190
+Arun Chander: Yeah. Sounds. Good. No. Problem.
+
+122
+00:21:46.954 --> 00:21:48.300
+Kamal Boorghani: Can you all see my screen.
+
+123
+00:21:50.790 --> 00:21:51.510
+Arun Chander: Yep.
+
+124
+00:21:51.510 --> 00:21:53.190
+Kamal Boorghani: Alright. So
+
+125
+00:21:54.220 --> 00:22:00.189
+Kamal Boorghani: with everything that was mentioned, we went to the market looking for a new platform
+
+126
+00:22:00.250 --> 00:22:05.299
+Kamal Boorghani: that can help with the challenges that we're facing today. Specifically, I want to talk about
+
+127
+00:22:05.700 --> 00:22:12.140
+Kamal Boorghani: on the left plur. What were our strategic objectives? As Andy also mentioned before.
+
+128
+00:22:12.240 --> 00:22:28.300
+Kamal Boorghani: one of the challenges that we have today is we can achieve automation, and and high automation and with low maintenance. But we need to spend a lot of money for developing a solution.
+
+129
+00:22:28.340 --> 00:22:38.129
+Kamal Boorghani: So one of our 3 key objectives was find being able to build solutions very fast and very cost effective.
+
+130
+00:22:38.702 --> 00:22:44.320
+Kamal Boorghani: At the same time, we wanted to be able to have high accuracy because accuracy is key humans.
+
+131
+00:22:44.710 --> 00:22:58.097
+Kamal Boorghani: I have about somewhere between 97 to 99% accuracy when it comes to data entry. The system that we're looking to adopt should be able to provide similar level of accuracy as humans or even higher right?
+
+132
+00:22:58.640 --> 00:23:01.322
+Kamal Boorghani: and also, the other challenge is
+
+133
+00:23:02.180 --> 00:23:04.839
+Kamal Boorghani: we want to be able to build something fast.
+
+134
+00:23:04.920 --> 00:23:17.110
+Kamal Boorghani: We want to be able to achieve high accuracy and high automation. We want the data to be lifted, and we want it to be accurate. At the same time, we don't want to spend a lot of time maintaining these models. These machine learning models
+
+135
+00:23:17.570 --> 00:23:25.769
+Kamal Boorghani: to keep up to date with the data. One of the things that I mentioned is we don't have control over our data, right. Also, our business keeps changing the forms to
+
+136
+00:23:26.424 --> 00:23:33.239
+Kamal Boorghani: for compliance, reason, or to capture more. You know details that you know they need for some other new process. So
+
+137
+00:23:33.360 --> 00:23:46.104
+Kamal Boorghani: we've got this concept of data drift, which means, you know, the data that you built your model with is now very different, which results in a model drift. So your models don't have the same level of automation and accuracy. So you gotta spend some time always
+
+138
+00:23:46.420 --> 00:23:58.710
+Kamal Boorghani: to to maintain your models. And these 3 things I actually started to calling calling this 3 the impossible Trinity sort of a term borrowed from international economics.
+
+139
+00:23:59.200 --> 00:24:05.799
+Kamal Boorghani: you can. You can always have 2 of these, you know, prior to, you know, 2,023.
+
+140
+00:24:05.970 --> 00:24:11.349
+Kamal Boorghani: We could, for example, with our existing stack, build a high accuracy, high automation
+
+141
+00:24:11.450 --> 00:24:22.810
+Kamal Boorghani: solution that is low maintenance. But it. We would spend so much time developing and so much money developing that that the solution would never break even right. The payback would be
+
+142
+00:24:23.140 --> 00:24:38.570
+Kamal Boorghani: in order of years, or we could build something, you know, very fast, you know, with our existing stack, and we keep it low maintenance, but it would have very low accuracy right? So you could always, if you could always achieve 2 of these, but not all 3 together
+
+143
+00:24:38.600 --> 00:24:48.909
+Kamal Boorghani: right, but for the you know, for the Rfp. That we did last year we were looking for a solution that could achieve all of the the 3 objectives together.
+
+144
+00:24:49.407 --> 00:25:11.030
+Kamal Boorghani: and the solution that we found was from a vendor called nudesic, which was which I'm gonna just speak a little bit more about in in future slides that to our surprise they were able to. We were able to see all 3 objectives, you know, checked off for us at the same time, this, this platform that nudesic offers
+
+145
+00:25:11.420 --> 00:25:33.550
+Kamal Boorghani: utilizes modern architecture. It's a node. Js application with react front end. All modern frameworks, web frameworks. It's built on serverless architecture. We don't have to do costly upgrades. The system is kept up to date for us.
+
+146
+00:25:33.730 --> 00:25:44.450
+Kamal Boorghani: The architecture of the platform is micro services. They provide extensible Apis to and modularize pieces and components to to build
+
+147
+00:25:44.900 --> 00:25:48.279
+Kamal Boorghani: and improve and add new new features to the system.
+
+148
+00:25:49.255 --> 00:25:53.610
+Kamal Boorghani: And also they provide you know, security access management.
+
+149
+00:25:53.660 --> 00:25:54.893
+Kamal Boorghani: you know,
+
+150
+00:25:56.230 --> 00:26:08.149
+Kamal Boorghani: for disaster, recovery and high availability. Again, cloud and service architecture really, provides an easy way to achieve those objectives.
+
+151
+00:26:08.190 --> 00:26:25.470
+Kamal Boorghani: and also from from an roi perspective. The the the pricing was very fa was very favorable. When it came to this new platform. So on a high level, what Idp does, you could always just have this picture as idp you get
+
+152
+00:26:25.480 --> 00:26:40.230
+Kamal Boorghani: from one end. You're getting documents, and we'll speak to like what type of documents you have. Just feed a document. You use machine learning. You use AI to classify the documents, right?
+
+153
+00:26:40.240 --> 00:26:47.930
+Kamal Boorghani: And the classification is, you know, figuring out what type of documents you have in your system, because you have taxonomies and
+
+154
+00:26:48.250 --> 00:27:11.029
+Kamal Boorghani: data points attached to a type of document, for example, from a claim. You know, you're you need these 10 fields. And from a drug receipt you, you're you're looking at 10 other different fields or 20 different fields, completely different taxonomy attached to that. And then the machine learning is used to extract the data from the forms and the output of of this
+
+155
+00:27:12.015 --> 00:27:12.880
+Kamal Boorghani: platform
+
+156
+00:27:13.160 --> 00:27:23.599
+Kamal Boorghani: is essentially like structured data and structured data could be in form of, for example, a Json or an Xml, and that data, or it could be an Api call to a downstream system.
+
+157
+00:27:23.810 --> 00:27:31.239
+Kamal Boorghani: But typically we provide this, this, a structured data that a downstream system can consume
+
+158
+00:27:31.300 --> 00:27:44.660
+Kamal Boorghani: and automate the rest of the workflow, is it? If it's adjudicating the claim, if it's onboarding a new plan for for a member, for, for example, Grs, changing an address of A,
+
+159
+00:27:44.890 --> 00:27:48.730
+Kamal Boorghani: of of a member for Gb, like all of that could be achieved
+
+160
+00:27:48.780 --> 00:27:51.780
+Kamal Boorghani: with those those actionable structured data.
+
+161
+00:27:53.210 --> 00:27:54.070
+Kamal Boorghani: Now.
+
+162
+00:27:54.380 --> 00:27:58.808
+Arun Chander: Kamal. I just sorry to interrupt, but I just wanna do a quick time check for 8 31. So.
+
+163
+00:27:59.030 --> 00:28:00.140
+Kamal Boorghani: Okay, I'm gonna just.
+
+164
+00:28:00.140 --> 00:28:02.190
+Arun Chander: Yeah. But fly through this.
+
+165
+00:28:02.350 --> 00:28:27.239
+Kamal Boorghani: So when it comes to type of documents, I got 2 more slides. This we got like 3 type of documents got structured documents, the one that Andy was showing. The data is labeled. And we can clearly you can. You can define a template, for example, to expect, you know, from this form that I see on the bottom. You know. I expect these pieces of data in these specific locations, right?
+
+166
+00:28:27.330 --> 00:28:51.150
+Kamal Boorghani: This could have been done before with a lot of existing technologies with deep learning, but you always needed to build a template right, which was extremely time consuming when you have high variations. As Katan was mentioning. We have, like 22,000 variations in total. So you you could never you would never have a a reasonable payback when it when it comes to building this stuff.
+
+167
+00:28:52.091 --> 00:29:03.880
+Kamal Boorghani: But with the new platform, because they're using template lists structure using Openai and Gen. AI, we're actually able to automate these forms relatively quickly.
+
+168
+00:29:04.140 --> 00:29:11.889
+Kamal Boorghani: So this is, this is a big, this was one big differentiator. You know, those 3 strategic objective just manifests itself and us being able to build
+
+169
+00:29:11.960 --> 00:29:15.900
+Kamal Boorghani: automation for something like this a lot quicker than before.
+
+170
+00:29:16.090 --> 00:29:36.470
+Kamal Boorghani: The second type of documents that we have with semi structured documents like an invoice. Right invoice are a little bit more complex. You have the same information, but they're just presented differently. You might have 10,000 variations. Right? So again, the the new cognitive services
+
+171
+00:29:36.470 --> 00:29:57.729
+Kamal Boorghani: that azure provides that you know our platform is using state of the art and is able to extract data from the invoices. Very good. And if it's lacking one or 2 again, this is where Gen. AI comes to to save us with injecting Openai here to be able to extract those fields that the the state of the art
+
+172
+00:29:57.820 --> 00:29:59.899
+Kamal Boorghani: pre-built models cannot extract. Now.
+
+173
+00:29:59.940 --> 00:30:03.559
+Kamal Boorghani: the most exciting thing is actually unstructured document
+
+174
+00:30:03.660 --> 00:30:04.800
+Kamal Boorghani: until
+
+175
+00:30:04.870 --> 00:30:08.049
+Kamal Boorghani: until probably a few months ago.
+
+176
+00:30:08.260 --> 00:30:15.020
+Kamal Boorghani: when you're looking at a document with hundreds of pages such as the one that you're looking is a Gb booklet
+
+177
+00:30:15.508 --> 00:30:35.821
+Kamal Boorghani: on on the right side. We were not able to extract data from this type of unstructured document. So because the key pieces of data unlike the semi structure of structures actually embedded in a paragraph, right? So someone needs to read the paragraph, understand it and be able to extract the the key pieces of data from from
+
+178
+00:30:36.510 --> 00:30:43.600
+Kamal Boorghani: from the the document. And given that, you know, these documents are hundreds of pages that was impossible. Now with Gen. AI.
+
+179
+00:30:43.680 --> 00:30:50.250
+Kamal Boorghani: This is one of the most exciting opportunities that actually becomes actionable and and can be automated.
+
+180
+00:30:51.280 --> 00:31:14.572
+Kamal Boorghani: How is all of this achieved? Again, as I alluded before. Nudesic platform is in the middle, and it's really. What's what's making the heavy lifting is azure cognitive services, such as document intelligence, and combining that with Openai. So the nudesic platform is is built on top of azure. It uses
+
+181
+00:31:15.780 --> 00:31:18.489
+Kamal Boorghani: azure services and azure platform.
+
+182
+00:31:18.550 --> 00:31:28.759
+Kamal Boorghani: and they have provided a a a. Their application sits on top of it. The platform and what? There's 1 layer on top that allows us, like the Dbas
+
+183
+00:31:29.320 --> 00:31:45.330
+Kamal Boorghani: alongside business to build custom models for classification document on onboard documents for extraction, you know, have different solution for different lines of business, and being able to, you know, assign security, governance, and all that good stuff.
+
+184
+00:31:46.100 --> 00:31:47.240
+Kamal Boorghani: All right. So.
+
+185
+00:31:47.240 --> 00:31:58.989
+Andy Clark: I see a a question from Gervine there about the experience with how handwriting is being understood or recognized. And I think, Gervine, we're about to run a
+
+186
+00:31:58.990 --> 00:32:18.820
+Andy Clark: quite a large set of documents through our live pilot that we're doing. So I think we'll be in a better place to answer that question, because we haven't run huge volumes through it yet, to be able to tell you for sure. But initial tests look pretty good. Handwriting is one of those things that I think Kamal would tell you that
+
+187
+00:32:18.820 --> 00:32:30.040
+Andy Clark: the Icr recogn of handwriting has come a long way and had come a long way already. With other products. We expect it to be good, but we'll know more in a few more weeks.
+
+188
+00:32:31.570 --> 00:32:32.360
+Gurveen Rekhi: Thank you.
+
+189
+00:32:32.910 --> 00:32:54.635
+Arun Chander: Sounds good. I'm just going to do a quick time check at 8 35. I wanna thank Andy and Kamal for sharing the material and joining us today. I would recommend that if you have questions, please. Direct those questions to myself or anyone on the Coe team, so we can coordinate that with Kamal and Andy, and then provide responses to everyone on the call. There might be folks who have the exact same questions
+
+190
+00:32:55.146 --> 00:33:02.279
+Arun Chander: so feel free to do that. We may want to go in groovy. Do you want to share your screen, or do you want me to share it on my end.
+
+191
+00:33:02.280 --> 00:33:07.119
+Gurveen Rekhi: You, you you go ahead we'll cover those quick slides, and then we have the punk rock and then
+
+192
+00:33:07.220 --> 00:33:08.860
+Gurveen Rekhi: share a screen to the demo.
+
+193
+00:33:09.050 --> 00:33:09.710
+Arun Chander: Okay.
+
+194
+00:33:10.235 --> 00:33:10.760
+Gurveen Rekhi: Okay.
+
+195
+00:33:10.760 --> 00:33:11.190
+Arun Chander: Sounds.
+
+196
+00:33:11.190 --> 00:33:27.199
+Gurveen Rekhi: So, Jenny, I, Jenny, Jenny, I just needs an introduction, or we need to, you know. Talk more about what we have done. I thought, I'll we'll cover what we've done. And then we go into some of the demos that we have, you know, seen as common patterns that are involved.
+
+197
+00:33:27.524 --> 00:33:31.049
+Gurveen Rekhi: Jenia has been there in existence for more than one and a half years now.
+
+198
+00:33:31.359 --> 00:33:52.539
+Gurveen Rekhi: With Laura sponsorship we kind of started and build the centralized Coe team with some seed funding to do a lot of work in that, you know. If you see the screen, there are multiple patterns that have come in. I think there are more experiments that we've done. I think most more than 30 plus experiments that have been done so far, but by and large. These are the ones that kind of stand out and have been reused over and over now.
+
+199
+00:33:52.620 --> 00:34:02.209
+Gurveen Rekhi: So if I start from the left hand side to the right. I think I'll pick out to where Andy kind of Close and Idp, although they are, the the 2 solutions are unique, and they have their own ways.
+
+200
+00:34:02.553 --> 00:34:13.229
+Gurveen Rekhi: You know, this comes in handy where you know you have structured documents wherever you have information sets with large information sets, and you don't have a way to consume that fast
+
+201
+00:34:13.300 --> 00:34:16.690
+Gurveen Rekhi: right? So that's where Jenna kind of plays in when so you would have heard.
+
+202
+00:34:16.710 --> 00:34:22.579
+Gurveen Rekhi: you know. Open AI and chat GPS of the world. One thing that is unique for sun life is that
+
+203
+00:34:23.100 --> 00:34:38.560
+Gurveen Rekhi: we were in a risk that you know. You know, solutions like Chat, Gbt and all, before they had started offering their enterprise version, were accessing Internet right? And and that was like a show stop of our sunlight, so we said, will not go through the route of
+
+204
+00:34:38.935 --> 00:34:53.189
+Gurveen Rekhi: The Openai will follow a more controlled approach so therefore, we resorted to doing a partnership with Aws and using their infrastructure on the bedrock and other services. We said that we'll build solutions in house.
+
+205
+00:34:53.210 --> 00:34:55.939
+Gurveen Rekhi: So if you look at the 1st hour here of chat boards.
+
+206
+00:34:55.949 --> 00:35:07.940
+Gurveen Rekhi: I think that's by far the most successful pattern that you would see in almost every every team where they have huge pile of documents, and they want information at, you know, at a at a click of a button.
+
+207
+00:35:08.285 --> 00:35:24.749
+Gurveen Rekhi: They want the new joiners to quickly use this information for getting awareness about the the products that we offer, the know how material that we have, and then various other purposes, that they may use it for some users for the operational benefits on the use for
+
+208
+00:35:24.750 --> 00:35:38.320
+Gurveen Rekhi: paying some use it for knowledge, consumption or knowledge management. So you've done multiple solutions for sunlight, global solutions or sunlight global investments. You've done work for Asia and Philippines, Rocky Advisor.
+
+209
+00:35:38.320 --> 00:36:02.740
+Gurveen Rekhi: We done work for Canada Advisor Hub there. And plus. There are other examples to follow. But the the important and good news here is that that pattern of chat board is not very hard, including the Devops pipelines, including the entire end to life cycle. Of how do you upload and ingest these heavy documents of 100 200 pages? And how do you quickly build a bot within a matter of 2 to 3 weeks.
+
+210
+00:36:02.790 --> 00:36:16.910
+Gurveen Rekhi: and I'll repeat 2 to 3 weeks that you are able to now roll out a chat board to the to the end users in a very controlled pilot environment so they can use it reference it. And then, you know, they can then further enhance it to the prompt. In general.
+
+211
+00:36:17.280 --> 00:36:39.939
+Gurveen Rekhi: one of the demos today will be about chat bots, and we'll show you how simple that interface looks like. Now you can always argue that. Is it scalable enough? Can it be integrated in enterprise level applications? So those questions will come in because we are trying to clear some of the governance and INFOSEC hurdles for that, and also trying to build some kind of governance around.
+
+212
+00:36:39.940 --> 00:36:53.379
+Gurveen Rekhi: How do you make sure that when when these responses are coming for the end users it's there's a human in the loop to make sure there is no incorrect messaging either to our internal clients, to our external models.
+
+213
+00:36:54.230 --> 00:36:57.700
+Gurveen Rekhi: So I'll I'll you know, this is one of the main patterns that we show you.
+
+214
+00:36:58.147 --> 00:37:03.540
+Gurveen Rekhi: There's an another important thing that that you all might have gotten exposure to called sunlight fast.
+
+215
+00:37:04.130 --> 00:37:10.959
+Gurveen Rekhi: So what we did is like, I said, you are not ready for exposing our you know, sunlight network to an Internet.
+
+216
+00:37:10.980 --> 00:37:15.199
+Gurveen Rekhi: So therefore, we said, we're built somehow, internal Gpt, kind of an engine.
+
+217
+00:37:15.270 --> 00:37:21.899
+Gurveen Rekhi: I won't compare the capabilities for now. But I would assume that this ha! This will give you a lot of efficiency in terms of
+
+218
+00:37:21.970 --> 00:37:36.450
+Gurveen Rekhi: doing some content generation, asking or writing emails or building proposals, or doing a lot of other things, even generating pseudo code. In a lot of cases we have done where, you know, we we gave a problem statement to it and created a pseudo code for us.
+
+219
+00:37:36.500 --> 00:37:53.269
+Gurveen Rekhi: and then that would allow allow us to do a bit of a validation here. So so a lot of knowledge can be easily consumed and underlying documents could be Pdf, word even excel in some cases. So this this kind of chat bot pattern comes in very handy.
+
+220
+00:37:53.290 --> 00:37:59.500
+Gurveen Rekhi: So if you have a use case where you have large pile of documents and information sets, and you want a quick interface to do a
+
+221
+00:37:59.804 --> 00:38:07.490
+Gurveen Rekhi: you know, easy querying, and a very constructive constitute answer which is not ready made available in the documents. This is a pattern to go to.
+
+222
+00:38:09.060 --> 00:38:09.830
+Gurveen Rekhi: Yeah.
+
+223
+00:38:09.970 --> 00:38:14.340
+Gurveen Rekhi: Second one is summarization of, you know, kind of a smaller avatar of that
+
+224
+00:38:14.430 --> 00:38:40.699
+Gurveen Rekhi: where you have a large pile of documents. But you want some kind of a summarized reporting on that. We have cases with Slc. We have done work with us teams in call center. They've done work with group retirement services and various other examples are there where you had a lot lot of information, and you wanted a summary of that in a very simplified manner, so that either it's for executive consumption or for portfolio, somebody report writing, or it could be even for
+
+225
+00:38:40.700 --> 00:38:59.439
+Gurveen Rekhi: summarizing the actions that you got from the calls with your call center executives, or probably with the clients, and so on, so forth. And then the summarization comes in very handy where it can even give you actions by a user or a via speaker. So let's say, me and Andy, are. We are chatting in that room or in this particular room.
+
+226
+00:38:59.550 --> 00:39:14.170
+Gurveen Rekhi: and we want the bot to say, Okay, whatever Andy says the is, the is A is, is, the is a directive in this room. So give us actions whatever Andy kind of calls out in this room, so that way you could pretty much have a directed.
+
+227
+00:39:14.190 --> 00:39:17.290
+Gurveen Rekhi: and a very simplified minutes of the meeting
+
+228
+00:39:17.310 --> 00:39:32.039
+Gurveen Rekhi: created by the owner. And through some kind of a prompt engine, you could further filter it by what kind of keywords are spoken, what kind of actions were generated out of it? So that tomorrow, if you want to do some kind of an automation, using Rp or any other tool that you have.
+
+229
+00:39:32.130 --> 00:39:35.129
+Gurveen Rekhi: you could pretty much take that and then convert it into work. Flow.
+
+230
+00:39:36.750 --> 00:39:58.289
+Gurveen Rekhi: 3rd is a blog productivity. You would all experience at some shape if you're a developer co-pilot was launched Ms 365 is also being looked at by the Ct organization. So these tools are developer tools which will help you in doing efficiency. We've already seen. And we done a hackathon very recently, we've got multiple solutions created by the developers.
+
+231
+00:39:58.290 --> 00:40:19.330
+Gurveen Rekhi: So this tool is coming in handy wherever there's a developer involved. And you wanted to simplify their life and generating code writing, quote, commenting, simplifying quote generation doing application, build out. And and then so many other use cases are there. This is also being backed up now with Amazon queue apps which are being now rolled out for
+
+232
+00:40:19.711 --> 00:40:23.739
+Gurveen Rekhi: specifics. Andy, I see your hand. Yeah, I'll I'll cover the queue part in a minute.
+
+233
+00:40:23.740 --> 00:40:31.619
+Andy Clark: Oh, yeah, I and I I wanted what I wanted to ask was, so when you build out one of these capabilities, when you've done this?
+
+234
+00:40:32.317 --> 00:40:40.409
+Andy Clark: How much maintenance is required after the build. And and then you know what.
+
+235
+00:40:40.490 --> 00:40:50.169
+Andy Clark: what kind of things are you doing to sort of monitor what something that you've built to ensure that it's still delivering the results that you're looking for.
+
+236
+00:40:51.150 --> 00:41:01.359
+Gurveen Rekhi: Correct. Both both valid questions are very important ones. I'll answer part of it because it's still not hard, and it's not in production, but some we already kind of put frameworks to do that.
+
+237
+00:41:01.490 --> 00:41:18.820
+Gurveen Rekhi: So number one thing is that, how do you ensure that the versions and everything that is that you're pumping in is up to date, I think what we've done is that we have built the Mlops pipelines in such a way that every document is unique in its own way. So we have seen cases where a document version would get upgraded every time. Right?
+
+238
+00:41:18.840 --> 00:41:41.629
+Gurveen Rekhi: So what you would do is with the indexing that we've built automatically refreshes with every new document upload that you've done. So let's say you had multiple version of the document. All you need to do is drag, drop the documents and rerun the model which almost takes, you know, your very, very few minutes to to re repurpose itself. So therefore not. We've not seen a lot of maintenance to be done, per say, from a
+
+239
+00:41:41.630 --> 00:42:03.520
+Gurveen Rekhi: from a maintenance of the solution point of you know when you start to integrate it with an application with sun live users. I'm sure there'll be a lot of heaviness in terms of regression, testing and making sure things are alright, but pure play genia applications. Not much of element required unless you're not wanted to know. Visualize that. I need at least 10 doc. 10 version of the document which I wanted to be compared.
+
+240
+00:42:03.630 --> 00:42:07.149
+Gurveen Rekhi: So so then, and then the complexity changes. But again, there are ways to handle that
+
+241
+00:42:07.520 --> 00:42:10.749
+Gurveen Rekhi: then the second part is around. Maintain on the monitoring part of it.
+
+242
+00:42:11.069 --> 00:42:26.149
+Gurveen Rekhi: Because we thought that you know, we are building so many chat bots and aws. Bedrock is having a cost component of it and everything. We built an underlying Chatbot dashboard of usage matrices which essentially tells you that how many queries are fired on a regular basis. Is Chatbot even responsive or not?
+
+243
+00:42:26.210 --> 00:42:54.419
+Gurveen Rekhi: And and you know, funny part when we did some initial analysis with Asia, said, oh, we will do 2 million dollars of saving. You know, there'll be 500 query hits, and then they they give all kind of metrics for us to cover. But when we started looking at the metrics on adoption side, we said, No, no, it's not cutting them in the corner, so you need to. Then look at your adoption trend, and one of the hardest part that you'll hear in Jenia is. It's not a technology. It's more of the adoption side.
+
+244
+00:42:54.620 --> 00:42:56.259
+Gurveen Rekhi: What you'll see is that
+
+245
+00:42:56.270 --> 00:43:09.849
+Gurveen Rekhi: you? While these chat bots are great, they did lower value either. People are not adopting because they have a go to document that they always refer to, or it's their fear of, you know their job being away or doing. Yes.
+
+246
+00:43:09.850 --> 00:43:32.059
+Gurveen Rekhi: that kind of a dynamic coming in and say, Oh, I don't! I'm not interested in this chat. What I'm I may not use it. I like it. I'm happy with the response and everything. But this is not my preferred. Go to bot. So so that kind of direction can also be managed through the dashboard. I think the punker will quickly show the glimpse of that. As is other demo. But that monitoring dashboard gives you at least a metrics of how it's being used
+
+247
+00:43:32.150 --> 00:43:42.890
+Gurveen Rekhi: not to the point. Is it saving you enough dollars? I think that responsiveness is still yet to be measured, because, you know, let's say you got the board, and if you're able to deliver 10 more tickets now.
+
+248
+00:43:42.930 --> 00:43:52.299
+Gurveen Rekhi: or you're able to do another project in your area. That measurement we have not got a clear metric on from the business, but that that is anyways a framework. We're designing now.
+
+249
+00:43:53.350 --> 00:43:54.270
+Andy Clark: Thanks, Scribby.
+
+250
+00:43:55.070 --> 00:44:21.189
+Gurveen Rekhi: Perfect. I'll not spend more time, because the I think employee productivity co-pilot is there? Amazon? Queue apps is a name that you should remember. Maybe we do a demo separately on that that helps. That's like a managed service from aws to build solutions faster. And there is a capability that will allow you to do data analysis faster. So some people who are not equipped to handle or build a ui on their own, or do, the entire Ml. Of pipeline
+
+251
+00:44:21.190 --> 00:44:27.699
+Gurveen Rekhi: might resort to doing queue apps, because that is like a paid service so quickly running up a bot or spinning up a solution is very fast.
+
+252
+00:44:28.860 --> 00:44:49.890
+Gurveen Rekhi: I'll not cover the last one, because a mix of pattern recognition and novel detection is always a mix of AML data processing and genia, we have not come across a very clear cut use case. So maybe this group can become innovative in giving us some problem. But but that is an area which requires more analysis than just genia.
+
+253
+00:44:50.900 --> 00:44:55.340
+Gurveen Rekhi: Any questions before we jump to the demo. I'm not sure there's anything in the chat.
+
+254
+00:44:55.620 --> 00:45:00.760
+Arun Chander: Yeah, Guru, do you have a standard platform for recording these patterns that you guys are creating
+
+255
+00:45:01.240 --> 00:45:01.820
+Arun Chander: like a 2.
+
+256
+00:45:02.066 --> 00:45:31.620
+Gurveen Rekhi: Yeah. So in in our source is a go to place. Then. What you've done is the the chat board pattern I'm talking about summarization. All those have been hardened, and now is there in the repository. So so we and anytime we get a new request to build a new chat board. All we do is just copy paste the repo repo in the in the Github, and then just enable the entire processing. And and so that's the reason I'm saying, when we started off 1st time, it took us around 8 to 10 weeks. But now it just takes 2 to 3 weeks to build a board, make it ready for the business to use.
+
+257
+00:45:32.430 --> 00:45:33.040
+Arun Chander: Right.
+
+258
+00:45:34.230 --> 00:45:48.733
+Gurveen Rekhi: Yeah. And then, yeah, Bob, dipa, you know, I'm sure you're right. We're working with with you and on on on the other use cases that you have kinda given us. I'm not sure Joe is Lt meeting but yeah, we could. We could.
+
+259
+00:45:49.250 --> 00:45:52.149
+Gurveen Rekhi: I think the bunker presented, and it's good then already.
+
+260
+00:45:52.150 --> 00:46:01.940
+Anshul Kathuria: Yeah, yeah, I just mentioning to Will as a connection point that we did present this as a knowledge management solution, the Chat board solution that Us operations could leverage potentially in the future.
+
+261
+00:46:03.400 --> 00:46:08.603
+Gurveen Rekhi: Perfect now over to the punkarana. You know how Don. You can share. And you can share the screen.
+
+262
+00:46:09.780 --> 00:46:11.409
+Deepankar Pant: Perfect. Let me
+
+263
+00:46:12.460 --> 00:46:13.529
+Deepankar Pant: do that.
+
+264
+00:46:13.710 --> 00:46:14.490
+Deepankar Pant: Okay.
+
+265
+00:46:14.590 --> 00:46:17.410
+Deepankar Pant: doing at the time. I'll try to be more efficient.
+
+266
+00:46:19.110 --> 00:46:19.949
+Deepankar Pant: But do not.
+
+267
+00:46:20.230 --> 00:46:20.510
+Gurveen Rekhi: Them.
+
+268
+00:46:22.037 --> 00:46:29.249
+Deepankar Pant: I hope you guys can see my screen. So you know, chat bot, right? I mean, before we jump into how this works is, how.
+
+269
+00:46:29.250 --> 00:46:53.909
+Deepankar Pant: how is it different from the Chat Gb. Or other Llms of the word within sun life? We could not have an open Llm. To, you know telling anything to anybody. Right? These are business specific chat bots. So we wanted them to respond in a limited, concise way about the objectives that they're designed around right? So the whole. This chat port pattern is built around a a architecture called rag retrieval augmented generation. We retrieve the
+
+270
+00:46:53.910 --> 00:46:55.930
+Deepankar Pant: information from sunlight documents
+
+271
+00:46:55.940 --> 00:46:58.559
+Deepankar Pant: we use Llms to augment it.
+
+272
+00:46:58.620 --> 00:47:11.471
+Deepankar Pant: you know, in in a way that it articulates well to the users. Query, right? That's the piece where Llm. Comes into picture now, behind these scenes, right? As I said, retrieval. So where does this
+
+273
+00:47:11.900 --> 00:47:38.059
+Deepankar Pant: information come from? So these are some of those documents right? So these are some of the Pdf, so in this case, these are for some like global investments, you'll see. You know, these are huge documents with a lot of information. I can keep going. So they talk about a lot of products, a lot of investment things that they have right? So these are the ones which are at the back end of this chat, along with the large language models. Right now.
+
+274
+00:47:38.220 --> 00:47:45.808
+Deepankar Pant: this is what the standard ui of a Chatbot looks like, you know, you can have a new chat you can have different keywords. These are different
+
+275
+00:47:46.140 --> 00:47:50.040
+Deepankar Pant: segregations of the data that we have within the chat. Bot
+
+276
+00:47:50.448 --> 00:48:00.539
+Deepankar Pant: there are 2 tabs here corresponding to 2 different products for Sl. Gi, now, you know, there is a basic greetings here. I'll just
+
+277
+00:48:00.960 --> 00:48:04.049
+Deepankar Pant: start asking a question. I already have one handy.
+
+278
+00:48:04.390 --> 00:48:07.169
+Deepankar Pant: I'll put it here. Hit enter
+
+279
+00:48:07.320 --> 00:48:14.700
+Deepankar Pant: Llms are still in experimentation within the sun. Life as well. These are dev environments. So they take quite some time
+
+280
+00:48:14.740 --> 00:48:16.980
+Deepankar Pant: to generate response at the moment.
+
+281
+00:48:18.200 --> 00:48:32.099
+Deepankar Pant: So while that happens, you can see on the left there are, we have put some frequently asked questions under these keywords as well. Okay. So now the response is here. I had asked, what is the need for a death claim what is needed for a death claim.
+
+282
+00:48:32.100 --> 00:48:53.430
+Deepankar Pant: So it said, based on documents, provided you need that certificate, beneficiary claim forms, and any other documentation, and actually gives us links to the source document from where it curated this information as well. If if I open one of these, I can go to these documents. So you know, this was one of the documents that I just had showed you earlier that we had
+
+283
+00:48:53.620 --> 00:48:56.410
+Deepankar Pant: fed and trained the Chatbot upon
+
+284
+00:48:56.430 --> 00:49:21.650
+Deepankar Pant: right. So you know, cause Llms are still developing. They still can hallucinate. So this serves as a proof point. If a person or a user wants to validate or get more information, they can always go to the source documents and get more details right? Similarly, you know, for this product as well we can. We can have, a different question. I have the question, Sandy. So
+
+285
+00:49:22.360 --> 00:49:25.429
+Deepankar Pant: this way. And then, you know, the response is
+
+286
+00:49:25.690 --> 00:49:30.519
+Deepankar Pant: just small features. Right? You can copy the responses if you want to pass them along here
+
+287
+00:49:30.680 --> 00:49:42.229
+Deepankar Pant: using this button, you can even export the whole session if you want to pass the whole conversation history, if you want to store it, or if you want to pass it to someone else for validation, for all those tasks
+
+288
+00:49:42.630 --> 00:49:55.789
+Deepankar Pant: right? It supports contextual questions as well. What it means is, I ask a question, and I can ask a follow up question, and we can disable that as well. Right if if it complicates the stuff. So there's a toggle button
+
+289
+00:49:55.930 --> 00:50:01.239
+Deepankar Pant: for this specific board, because the Slg support and operation teams
+
+290
+00:50:01.660 --> 00:50:12.820
+Deepankar Pant: are spanned across Ontario as well as Quebec. They wanted a French version of it as well. So you can see on the right. There's a small link here saying French.
+
+291
+00:50:12.860 --> 00:50:14.259
+Deepankar Pant: you can go there
+
+292
+00:50:14.400 --> 00:50:17.550
+Deepankar Pant: and then, you know, it just gives us
+
+293
+00:50:17.770 --> 00:50:21.479
+Deepankar Pant: the same replica of that bought in France.
+
+294
+00:50:21.530 --> 00:50:32.359
+Deepankar Pant: These keywords, as I mentioned. They have, we have put frequently asked questions here. You can actually directly click them, and they would be triggered as well. Similar to you. Writing down the questions there and getting the response
+
+295
+00:50:33.698 --> 00:50:49.739
+Deepankar Pant: So what it means is in the back end. We have trained it on French documents as well, and the Llm. Is able to understand the queries in French, and, you know, correspondingly return the responses as well. And again you. You would see that different document. Links are here as well
+
+296
+00:50:50.880 --> 00:51:12.300
+Deepankar Pant: now. As Goodine was mentioning, we have a and and there are a lot of similar chat bots that we have created for different business units right? So we have got a dashboard as well. That helps us track the adoption and the usage of it. Right on the left hand side, you can see. You know these are different. Chat bots at Curial, Hc. Advisor Sunny Slg.
+
+297
+00:51:12.350 --> 00:51:20.239
+Deepankar Pant: and these are some of the stats. These many messages have been fired so far. 6, 31 sessions. These many users
+
+298
+00:51:20.931 --> 00:51:28.939
+Deepankar Pant: usage trends per chat bot. You know the the geographical distribution of the messages as well as
+
+299
+00:51:29.250 --> 00:51:45.019
+Deepankar Pant: the distribution across the different chat bots. So you know, this dashboard really helps us look at the usage because many of the businesses pilot this, and they want to. You know the usage. One they can use know from the end users as well, and then from a metrics perspective, we can always help them with
+
+300
+00:51:45.070 --> 00:51:46.420
+Deepankar Pant: these numbers.
+
+301
+00:51:47.520 --> 00:51:59.206
+Deepankar Pant: Right? So this is the controlled chat bot that we have. And you know, this is how we had created the the chat bot solution. Now the other part of it is
+
+302
+00:52:00.010 --> 00:52:26.330
+Deepankar Pant: using sun life. So what we talked about sun life fast, so it is sunlight similar to a chat. Gb, right? Just within controlled sunlife environment. But we have not put any barrier on it. You can ask it any question. It'll respond to that question basis. The data it is, it was originally trained. Right? So you can ask it anything. So what we have done is we actually used it for certain business use cases as well. One of the used cases that came to us was
+
+303
+00:52:27.780 --> 00:52:34.760
+Deepankar Pant: was for a Dbts executive reporting. So the Dbts reporting team actually creates a monthly report for Laura
+
+304
+00:52:35.382 --> 00:52:52.480
+Deepankar Pant: And for that they request the inputs from different business groups as well, and the business groups, as usual, send the information in in, you know all a lot of different ways. Probably not the best way that they would want to get into a report as well, so what they are.
+
+305
+00:52:52.737 --> 00:52:56.850
+Arun Chander: Sorry. I'm just doing a quick time check. We are at time, so if you can
+
+306
+00:52:56.880 --> 00:53:00.479
+Arun Chander: maybe try and wrap it up in like a minute we can go, yeah.
+
+307
+00:53:00.480 --> 00:53:09.169
+Deepankar Pant: Perfect. I'll I'll just be quick. Right? So so what we did with this use case was, we created a elaborated prompt. I'll just quickly paste the prompt here. Right?
+
+308
+00:53:10.530 --> 00:53:11.920
+Deepankar Pant: and then.
+
+309
+00:53:12.780 --> 00:53:23.600
+Deepankar Pant: you know, this is a send sample information that let's say, as an end user. I provide to the reporting team right? It doesn't contain a lot of crisp information, so I'll quickly fire this prompt, and then we can talk about it. So
+
+310
+00:53:23.800 --> 00:53:41.740
+Deepankar Pant: if you see this all is prompt, right, instead of just saying, Create me executive report. So what it does. It has a lot of instructions that you know it sets a persona. You're an AI assistant, created Western life to help with strategy planning. Do this and that all those things right. So as part of these instructions, what we get as a response is this.
+
+311
+00:53:41.810 --> 00:53:45.149
+Deepankar Pant: So this is the guidelines. So these are the guidelines
+
+312
+00:53:45.190 --> 00:53:48.050
+Deepankar Pant: that needed to be used. And then
+
+313
+00:53:48.480 --> 00:54:13.570
+Deepankar Pant: this is the feedback. Right? Okay, this is still the guidelines. Okay, so this is the feedback. This is the feedback that the Llm is providing this should be done, the content does not include a so what statement which was needed right there were. It also says that all key elements for address, so it provides a format. It also gives us some instructions. Take your time. You know all these things. So
+
+314
+00:54:13.830 --> 00:54:26.440
+Deepankar Pant: basically out of this, it tells the end users that the input that you are providing for reporting team is either good or not good. If it is not good, then, you know, do these work on these suggestions to create a crisper
+
+315
+00:54:26.530 --> 00:54:45.739
+Deepankar Pant: input for the team. So you know, there are, there are a lot of similar use cases that can be simply solved by using prompts. It's just that. And you know this art of writing complex prompts to get a complex task done is known as prompt engineering, which is a buzzword nowadays, so I'll I'll take a pause here, looking at the time.
+
+316
+00:54:47.290 --> 00:54:50.460
+Arun Chander: Alright. Sounds good. Thanks the punker. Thanks, Maureen.
+
+317
+00:54:50.881 --> 00:55:07.790
+Arun Chander: I know we are a bit over time, but I wanna thank all of you, including Andy and Kamal, for joining and presenting today. I'd recommend that if you do have any questions for our presenters, please send them to myself or the Coe team, we can consolidate them and reach out to the speakers and get answers for everyone
+
+318
+00:55:08.147 --> 00:55:10.609
+Arun Chander: so once again, thank you so much, and
+
+319
+00:55:10.700 --> 00:55:12.889
+Arun Chander: look forward to meeting next time around.
+
+320
+00:55:14.270 --> 00:55:15.469
+Arun Chander: Have a good day. Everyone.
+
+321
+00:55:16.730 --> 00:55:18.360
+Anshul Kathuria: Thank you. Thanks. Everyone.
+
+322
+00:55:19.110 --> 00:55:19.420
+Chris Dahle (he/him): Bye.
+
