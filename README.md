@@ -2,7 +2,19 @@
 
 ## Overview
 This Read Me and its accompanying Jupyter Notebook provides instructions, code, and sample text to walk you through basic machine learning text analysis using Azure Cognitive Services. Specifically, the Jupyter Notebook will show you how to extract key phrases and entities, such as people, locations, and organizations, from a series of lengthy text documents. 
+ INPUt 
 
+ GBS Transition Requirements
+Committee Review Process
+BC GBS Committee conducts bi-weekly reviews requiring standardized presentations with detailed project-level information and mandatory SVP approval in Canada prior to business case submission.
+Business Case Development
+BC Approval preparation involves collaborating with project sponsors to analyze current state FTE structures, identify transition candidates, and assess severance implications.
+Service Level Agreements
+SLA Assessment requires partnering with business units to inventory transitioning processes and verify existing GBS service level agreements.
+Role Definition & Evaluation
+Job Descriptions must be updated and submitted to job evaluation teams for level classification before GBS recruitment can commence.
+HR Implementation Requirements
+GBS HR Setup necessitates defining employee working hours, holiday schedules, and cost center assignments. GBS will establish new cost centers as needed.
 The notebook provides context about the Cognitive Services Python SDK and troubleshooting information so you can take what you've learned and apply it to your own needs! 
 
 * Read Time: 10 min
